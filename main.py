@@ -1,6 +1,10 @@
-import get_inputs
 import neuralnet
+import linear_regression
 
-neuralnet.NeuralNet()
+input_file = 'nfl_bettinglines.csv'
+
+linear_regression.linear_regression(input_file)
+
+#neuralnet.NeuralNet()
 
 print("Done")

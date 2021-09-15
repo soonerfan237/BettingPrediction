@@ -2,12 +2,12 @@ import tensorflow as tf
 import get_inputs
 import numpy as np
 
-def NeuralNet():
+def NeuralNet(input_file):
     print("STARTING NeuralNet")
-    betting_lines = get_inputs.get_bettinglines()
+    betting_lines = get_inputs.get_bettinglines(input_file)
     x_train_list = []
     y_train_list = []
-    #np.append(y_train, 6)
+
     for row in betting_lines:
         y_train_list.append(row["hometeambeatspread"])
         x_train_list.append(np.array([[1, 1]], np.int32))

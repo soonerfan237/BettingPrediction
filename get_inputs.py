@@ -1,8 +1,12 @@
 import csv
+import pandas as pd
 
-def get_bettinglines():
+def get_bettinglines_df(input_file):
+    return pd.read_csv(input_file)
+
+def get_bettinglines(input_file):
     bettinglines = []
-    with open('nfl_bettinglines.csv', newline='') as csvfile:
+    with open(input_file, newline='') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',')
         next(csvreader)
         for row in csvreader:
